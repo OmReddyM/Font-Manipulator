@@ -12,10 +12,10 @@
 
 .copyright_footer{
     position:fixed;
-    color: lightcoral;
+    color: darkblue;
     bottom: 0;
     width: 100%;
-    background-color: blue;
+    background-color: orange;
     line-height: 3;
     text-align: center;
     font-size: large;
@@ -24,5 +24,10 @@
 canvas{
     border: 5px solid white;
     border-radius: 20px;
-    box-shadow: 5px 5px 5px grey;
+    box-shadow: 5px 5px 5px greenyellow;
+}
+
+body{
+    background-image: url('backgorund.jpeg');
+    background-size: cover;
 }
