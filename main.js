@@ -1,3 +1,7 @@
+leftWristX = 0;
+rightWristX = 0;
+difference = 0;
+
 function setup() {
     video = createCapture(VIDEO);
     video.size(550, 500);
@@ -12,6 +16,8 @@ function setup() {
 
 function draw() {
     background("#54e3a5");
+    text("Notice (21-2-2022):" + "\nSneaky Steve stole" + "\na single salted sultana", 20, 150);
+    textSize(difference/2);
 }
 
 function modalLoaded() {
@@ -21,5 +27,10 @@ function modalLoaded() {
 function gotPoses(results) {
     if (results.length > 0) {
         console.log(results);
+        leftWristX = floor(results[0].pose.leftWrist.x);
+        rightWristX = floor(results[0].pose.rightWrist.x);
+        difference = leftWristX - rightWristX;
+        console.log("Left Wrist X = " + leftWristX + ", Right Wrist X = " + 
+        rightWristX + ", Difference = " + difference);
     }
 }
